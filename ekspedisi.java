@@ -37,16 +37,17 @@ public class ekspedisi {
             kPOs = transaksi.nextLine();
             System.out.print("No. Handphone : ");
             nHandphonePenerima = transaksi.nextLine();
-            System.out.println("Tanggal Kirim : ");
+            System.out.print("Tanggal Kirim : ");
             tKirim = transaksi.nextLine();
         
             System.out.print(clearScreen);
         
             System.out.print("apakah anda ingin memasukan data lain (y/n) : ");
-            String answer = transaksi.next();
-            if (answer.equals("n")) {
+            String jawaban = transaksi.next();
+            if (jawaban.equals("n")) {
                 break;
             }
+            System.out.println(clearScreen);
             transaksi.nextLine();
         }
         
