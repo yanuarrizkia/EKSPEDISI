@@ -2,6 +2,31 @@ import java.util.Scanner;
 public class ekspedisi {
     public static void main(String[] args) {
 
+        String username = "pengguna";
+        String password = "katasandi";
+
+        Scanner scan = new Scanner(System.in);
+        boolean berhasilLogin = false;
+        
+        System.out.print("Masukkan nama pengguna: ");
+        String inputUsername = scan.nextLine();
+        System.out.print("Masukkan kata sandi: ");
+        String inputPassword = scan.nextLine();
+        
+        while (!berhasilLogin) {
+            System.out.print("Masukkan nama pengguna: ");
+            String inputUsername = scan.nextLine();
+            System.out.print("Masukkan kata sandi: ");
+            String inputPassword = scan.nextLine();
+
+            if (inputUsername.equals(username) && inputPassword.equals(password)) {
+                System.out.println("Selamat datang, " + username + "!");
+                berhasilLogin = true;
+            } else {
+                System.out.println("Login gagal. Nama pengguna atau kata sandi salah.");
+            }
+        }
+        
         var clearScreen = ("\033[H\033[2J") ;
         System.out.println(clearScreen);
         
